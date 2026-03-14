@@ -167,7 +167,10 @@ const PatientDoctors = () => {
     departmentApi.getAll().then(res => setDepartments(res.data.data)).catch(() => {});
   }, []);
 
-  useEffect(() => { load(); }, [search, selectedDept]);
+  // useEffect(() => { load(); }, [search, selectedDept]);
+  useEffect(() => {
+  load();
+}, [load]);
 
   return (
     <Layout title="Find Doctors">
