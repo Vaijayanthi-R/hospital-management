@@ -52,7 +52,37 @@ A full-stack Java Spring Boot + React application for managing hospital appointm
 
 ---
 
-## 🚀 Quick Start
+## � Docker Setup (Recommended)
+
+### Prerequisites
+- Docker & Docker Compose
+
+### Quick Start with Docker
+```bash
+# Clone the repository (if not already)
+git clone <repository-url>
+cd hospital-system
+
+# Start all services
+docker-compose up --build
+
+# Or run in background
+docker-compose up -d --build
+```
+
+### Access the Application
+- Frontend: http://localhost:3000
+- Backend API: http://localhost:8080
+- MySQL: localhost:3306 (user: hospital, password: hospital123)
+
+### Stop Services
+```bash
+docker-compose down
+```
+
+---
+
+## 💻 Local Development Setup
 
 ### Prerequisites
 - Java 17+

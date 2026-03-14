@@ -15,8 +15,8 @@ RUN rm -rf /usr/share/nginx/html/*
 
 COPY --from=build /usr/src/app/build /usr/share/nginx/html
 
-# optionally copy a custom nginx.conf if you need to redirect API calls
-# COPY nginx.conf /etc/nginx/conf.d/default.conf
+# copy custom nginx.conf to redirect API calls
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
 EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
